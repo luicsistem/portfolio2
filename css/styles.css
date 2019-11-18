@@ -15,6 +15,7 @@ body {
     flex-wrap: wrap;
     min-height: 100vh;
 
+
 }
 h1 {
     color: #fff;
@@ -74,9 +75,11 @@ nav {
 
  /* ABOUT */
 .about {
-    background: #eee;
     width: 90%;
     margin: auto;
+    padding: 20px;
+    background: #ddd;
+
 }
 
 
@@ -126,9 +129,10 @@ nav {
  }
 /* PORTFOLIO */
 .portfolio {
-    /* display: flex; */
+    padding: 20px;
     margin: 0 auto;
     width: 90%;
+    background: #eee;
 }
 .portfolio-container {
     display: flex;
@@ -145,10 +149,58 @@ nav {
     
 }
 .portfolio-item figure  {
-    width: 30%;
-   
-    margin: 10px  ;
+    width: 31%;
+     margin: 10px auto ;
 }
+
+/* SKILL */
+.skills {
+    padding: 20px;
+    margin: 0 auto;
+    width: 90%;
+    background: #ddd;
+  }
+  
+ 
+  .skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 60px 30px;
+  }
+  
+  .bar-title {
+    margin-bottom: 18px;
+    width: 50%;
+  }
+
+  .bar, .bar div {
+      border-radius: 11px;
+  }
+  
+  .bar-title:nth-child(odd) {
+    padding-right: 20px;
+  }
+  
+  .bar-title:nth-child(even) {
+    padding-left: 20px;
+  }
+  
+  .bar-title h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  
+  .bar-title .bar {
+    height: 17px;
+    width: 100%;
+    background: white;
+  }
+  
+   .bar-title .bar div {
+    background: #537ec5;
+    width: 50%;
+    height: 100%;
+  }
 
  /* FOOTER */
  footer {
@@ -160,4 +212,16 @@ nav {
      background:  #1b2a49;
      color: #fff;
      align-self: flex-end;
+ }
+
+ /* RESPONSIVE */
+ @media screen and (max-width:768px) {
+    .portfolio-item figure  {
+        width: 50%;
+         margin: 3px auto ;
+    }
+    .portfolio-item figure img {
+        width: 270px;
+         
+    }
  }
