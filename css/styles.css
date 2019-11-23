@@ -45,8 +45,8 @@ header {
 
 
 nav {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 .menu {
     display: flex;
@@ -153,15 +153,15 @@ nav {
     
 }
 
+.port-img {
+   
+    width: 100%;
+}
 .portfolio img {
     width: 100%;
     object-fit: cover;
 }
 
-/* .portfolio-item figure  {
-    width: 31%;
-     margin: 10px auto ;
-} */
 
 /* SKILL */
 .skills {
@@ -226,6 +226,21 @@ nav {
 
  /* RESPONSIVE */
  @media screen and (max-width:768px) {
+    h1 {
+        font-size: 24px;
+        padding-left: 10px;
+    }
+
+    .menu li {
+        display: flex;
+        /* flex: auto; */
+        margin-right: 20px;
+        width: 80px;
+        line-height: 50px;  
+       }
+
+
+
     .portfolio-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
