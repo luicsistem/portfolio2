@@ -38,10 +38,12 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    height: 80px;
+    height: 70px;
     margin: 0 auto;
     background: #1b2a49;
 }
+
+
 nav {
     display: flex;
     align-items: center;
@@ -56,22 +58,30 @@ nav {
      display: flex;
      /* flex: auto; */
      margin-right: 30px;
-     
+     width: 100px;
+     line-height: 50px;  
     }
-    .menu li a {
+
+    .menu a {
+        display: inline-block;
+        color: #fff;
+        width: 100%;
         text-decoration: none;
         text-align: center;
-        color: #fff;
-        line-height: 3;
-        
-    }
     
+    }
+
     .menu li:first-child {
         border-bottom: 3px solid #537ec5;
 
  }
 
+    .menu a:hover {
+        background: #000;
+        border-bottom: 3px solid;
 
+    }
+    
 
  /* ABOUT */
 .about {
@@ -135,23 +145,23 @@ nav {
     background: #eee;
 }
 .portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 20px;
-    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 0 20px;   
     
 }
 
-.portfolio-item  {
-    display: flex;
-    flex-wrap: wrap;
-    
+.portfolio img {
+    width: 100%;
+    object-fit: cover;
 }
-.portfolio-item figure  {
+
+/* .portfolio-item figure  {
     width: 31%;
      margin: 10px auto ;
-}
+} */
 
 /* SKILL */
 .skills {
@@ -216,12 +226,22 @@ nav {
 
  /* RESPONSIVE */
  @media screen and (max-width:768px) {
-    .portfolio-item figure  {
-        width: 50%;
-         margin: 3px auto ;
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;        
     }
-    .portfolio-item figure img {
-        width: 270px;
-         
+
+ }
+
+ @media screen and (max-width:620px) {
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 10px;        
     }
+
+
  }
