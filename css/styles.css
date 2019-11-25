@@ -14,8 +14,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     min-height: 100vh;
-
-
 }
 h1 {
     color: #fff;
@@ -153,9 +151,48 @@ nav {
     
 }
 
-.port-img {
+.portImg {
+     position: relative;
+     align-items: center;
+     margin: 0 auto;
+     width: 100%;
+    
+    display: flex;
+    color: #fff;
+    /* overflow: hidden; */
+}
+.portImg__text {
+    display: none;
    
-    width: 100%;
+}
+.portImg:hover .portImg__text {
+    position: absolute;
+    padding-top: 20px;
+    padding-left: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0, .4);
+    box-shadow: 0 0 0 5px #ccc;
+    display: block;
+    transition: all .3s;
+  
+}
+
+.portImg__text h3{
+    padding: 5px;
+    font-weight: bold;
+}
+.portImg__text a {
+    color: #fff;
+    text-decoration: inherit;
+    margin-right: 10px;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    background: #46b3e6;
+
 }
 .portfolio img {
     width: 100%;
